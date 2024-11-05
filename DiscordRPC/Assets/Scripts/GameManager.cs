@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
     public void OnGameStart()
     {
         if (DiscordController.Instance != null)
-            DiscordController.Instance.UpdateDiscordActivity("Exploring: Europa");
+            DiscordController.Instance.UpdateDiscordActivity("Entering StarShip", "Earth");
     }
 
     public void OnPause()
@@ -16,12 +16,12 @@ public class GameManager : MonoBehaviour
 
     public void OnRoomEnter()
     {
-        var rooms = new string[] { "Saturn", "Pluto", "Mars", "Jupiter", "Uranus", "Neptune", "Mercury", "Venus" };
-        var random = new System.Random();
-        var randomIndex = random.Next(rooms.Length);
-        var roomName = rooms[randomIndex];
+        string[] planets = new string[] { "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto" };
+
+        System.Random random = new();
+        string planetName = planets[random.Next(planets.Length)];
 
         if (DiscordController.Instance != null)
-            DiscordController.Instance.UpdateDiscordActivity($"Exploring: {roomName}");
+            DiscordController.Instance.UpdateDiscordActivity($"Exploring {planetName}", "Milky Way");
     }
 }
