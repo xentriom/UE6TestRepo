@@ -8,6 +8,7 @@ public class DiscordController : MonoBehaviour
 
     private Discord.Discord discord;
     private Discord.ActivityManager activityManager;
+    private long appStartTimestamp;
 
     // Awake is called when the script instance is being loaded
     void Awake()
@@ -29,6 +30,8 @@ public class DiscordController : MonoBehaviour
     {
         discord = new Discord.Discord(1303048708031643751, (System.UInt64)Discord.CreateFlags.Default);
         activityManager = discord.GetActivityManager();
+        appStartTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        UpdateDiscordActivity("Exploring: Europa");
     }
 
     // Update is called once per frame
@@ -42,7 +45,9 @@ public class DiscordController : MonoBehaviour
     {
         if (Instance == this)
         {
-            discord.Dispose();
+            activityManager = null;
+            discord?.Dispose();
+            discord = null;
             Instance = null;
         }
     }
@@ -58,8 +63,8 @@ public class DiscordController : MonoBehaviour
         {
             Details = details,
             State = state,
-            Timestamps = { Start = DateTimeOffset.UtcNow.ToUnixTimeSeconds() },
-            Assets = { LargeImage = "logo", LargeText = "Entropy" }
+            Timestamps = { Start = appStartTimestamp },
+            Assets = { LargeImage = "logo", LargeText = "xentriom SampleGame" }
         };
 
         activityManager.UpdateActivity(activity, res =>
