@@ -31,7 +31,7 @@ public class DiscordController : MonoBehaviour
         discord = new Discord.Discord(1303048708031643751, (System.UInt64)Discord.CreateFlags.Default);
         activityManager = discord.GetActivityManager();
         appStartTimestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
-        UpdateDiscordActivity("Exploring: Europa");
+        UpdateDiscordActivity("Exploring Earth", "Earth");
     }
 
     // Update is called once per frame
@@ -57,14 +57,17 @@ public class DiscordController : MonoBehaviour
     /// </summary>
     /// <param name="details">The text for details</param>
     /// <param name="state">The text for state</param>
-    public void UpdateDiscordActivity(string details, string state = null)
+    public void UpdateDiscordActivity(string details, string smallImageKey)
     {
         var activity = new Discord.Activity
         {
             Details = details,
-            State = state,
             Timestamps = { Start = appStartTimestamp },
-            Assets = { LargeImage = "logo", LargeText = "xentriom SampleGame" }
+            Assets = 
+            { 
+                LargeImage = "logo", LargeText = "xentriom's",
+                SmallImage = smallImageKey.ToLower(), SmallText = smallImageKey 
+            }
         };
 
         activityManager.UpdateActivity(activity, res =>

@@ -5,13 +5,13 @@ public class GameManager : MonoBehaviour
     public void OnGameStart()
     {
         if (DiscordController.Instance != null)
-            DiscordController.Instance.UpdateDiscordActivity("Entering StarShip", "Earth");
+            DiscordController.Instance.UpdateDiscordActivity("Exploring Earth", "Earth");
     }
 
     public void OnPause()
     {
         if (DiscordController.Instance != null)
-            DiscordController.Instance.UpdateDiscordActivity("Paused", "Taking a break");
+            DiscordController.Instance.UpdateDiscordActivity("Cruising Through the Cosmos", "Galaxy");
     }
 
     public void OnRoomEnter()
@@ -22,6 +22,6 @@ public class GameManager : MonoBehaviour
         string planetName = planets[random.Next(planets.Length)];
 
         if (DiscordController.Instance != null)
-            DiscordController.Instance.UpdateDiscordActivity($"Exploring {planetName}", "Milky Way");
+            DiscordController.Instance.UpdateDiscordActivity($"Exploring {planetName}", planetName);
     }
 }
