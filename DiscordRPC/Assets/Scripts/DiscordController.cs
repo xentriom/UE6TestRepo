@@ -56,7 +56,7 @@ public class DiscordController : MonoBehaviour
     /// Update the Discord Rich Presence
     /// </summary>
     /// <param name="details">The text for details</param>
-    /// <param name="state">The text for state</param>
+    /// <param name="smallImageKey">The key for small image</param>
     public void UpdateDiscordActivity(string details, string smallImageKey)
     {
         var activity = new Discord.Activity

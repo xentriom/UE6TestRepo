@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public void OnGameStart()
+    public void OnRestart()
     {
         if (DiscordController.Instance != null)
             DiscordController.Instance.UpdateDiscordActivity("Exploring Earth", "Earth");
