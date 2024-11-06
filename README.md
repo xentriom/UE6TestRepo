@@ -9,4 +9,8 @@ The builds are organized in the following format:<br>
 [ProjectName]_[OS].zip<br>
 AppleSilicon: M series MacOS systems (M1, M2, etc.)<br>
 IntelMac: Intel based MacOS systems (2020 and earlier)<br>
-Windows: ARM 64-bit version for Windows 10 or later
+Windows: ARM 64-bit version for Windows 10 or later<br>
+<br>
+MacOS<br>
+System Settings -> Privacy & Security<br>
+Under Security click Open Anyway
