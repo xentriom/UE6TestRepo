@@ -1,4 +1,5 @@
 <h1 align="center">UE6TestRepo</h1>
+<p align="center">View the folders for more details on the what it accomplished</p>
 <p align="center">
   <a href="https://github.com/xentriom/UE6TestRepo/tree/main/DiscordRPC">DiscordRPC</a> •
   <a href="https://github.com/xentriom/UE6TestRepo/tree/main/LoadingScreen">LoadingScreen</a>
