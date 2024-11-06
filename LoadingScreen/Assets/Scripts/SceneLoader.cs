@@ -9,7 +9,7 @@ public class SceneLoader : MonoBehaviour
     // UI Elements
     public CanvasGroup publisherLogo, gameLogo, mainMenuCanvas, loadingScreenCanvas;
     public TextMeshProUGUI startGameText, tapToBeginText, versionText, taskTextTMP, percentageTextTMP;
-    public Button exitGameButton, settingsButton, fileVerificationButton;
+    public Button exitGameButton, settingsButton;
     public Slider progressBar;
 
     // Parameters
@@ -104,7 +104,6 @@ public class SceneLoader : MonoBehaviour
     private void SetLoadingScreenMidPoint()
     {
         SetGameObjectActive(settingsButton.gameObject, true);
-        SetGameObjectActive(fileVerificationButton.gameObject, true);
         SetGameObjectActive(exitGameButton.gameObject, true);
 
         SetGameObjectActive(percentageTextTMP.gameObject, false);
@@ -150,7 +149,6 @@ public class SceneLoader : MonoBehaviour
         SetGameObjectActive(percentageTextTMP.gameObject, isActive);
         SetGameObjectActive(exitGameButton.gameObject, isActive);
         SetGameObjectActive(settingsButton.gameObject, isActive);
-        SetGameObjectActive(fileVerificationButton.gameObject, isActive);
     }
 
     private void SetGameObjectActive(GameObject go, bool isActive)
