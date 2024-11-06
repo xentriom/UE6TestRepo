@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class LockstepManager : MonoBehaviour
 {
-    private readonly Queue<PlayerInput> inputQueue = new();
-    private float lockstepInterval = 0.1f;
+    private Queue<PlayerInput> inputQueue = new Queue<PlayerInput>();
+    private float lockstepInterval = 0.1f; // 100ms per step
     private float timer = 0f;
 
     void Update()
