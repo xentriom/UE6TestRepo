@@ -21,7 +21,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     public override void OnJoinedLobby()
     {
-        PhotonNetwork.JoinOrCreateRoom("SandboxRoom", new RoomOptions { MaxPlayers = 5 }, TypedLobby.Default);
+        PhotonNetwork.JoinOrCreateRoom("SandboxRoom", new RoomOptions { MaxPlayers = 20 }, TypedLobby.Default);
     }
 
     public override void OnJoinedRoom()
