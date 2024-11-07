@@ -5,6 +5,7 @@
   <a href="https://github.com/xentriom/UE6TestRepo/tree/main/LoadingScreen">LoadingScreen</a> •
   <a href="https://github.com/xentriom/UE6TestRepo/tree/main/Multiplayer">Multiplayer</a>
 </p>
+Default editor version and template for the projects, unless stated otherwise<br>
 Editor: Unity 6 (6000.0.25f1)<br>
 Template: Universal 3D Core<br>
 
