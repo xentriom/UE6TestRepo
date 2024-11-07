@@ -2,8 +2,9 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using Photon.Pun;
 
-public class ChatManager : MonoBehaviour
+public class ChatManager : MonoBehaviourPun
 {
     public TMP_InputField chatInput;
     public TMP_Text chatDisplay;
@@ -23,9 +24,15 @@ public class ChatManager : MonoBehaviour
         string message = chatInput.text;
         if (!string.IsNullOrEmpty(message))
         {
-            AddMessageToQueue(FormatMessage(message));
+            photonView.RPC("ReceiveMessage", RpcTarget.All, FormatMessage(message));
             chatInput.text = "";
         }
+    }
+
+    [PunRPC]
+    void ReceiveMessage(string message)
+    {
+        AddMessageToQueue(message);
     }
 
     private void AddMessageToQueue(string message)
