@@ -752,9 +752,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1163480997}
   - component: {fileID: 1163480998}
-  - component: {fileID: 1163480999}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: ChatManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,20 +788,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatInput: {fileID: 1374972844}
   chatDisplay: {fileID: 293307348}
---- !u!114 &1163480999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163480996}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8234f0b2318384150af5fd6700fb4b9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 274607948589945144, guid: 042fa7fc87b844cbd9dbcced3ee708af, type: 3}
-  spawnPoint: {fileID: 1497975639}
 --- !u!1 &1374972842
 GameObject:
   m_ObjectHideFlags: 0
